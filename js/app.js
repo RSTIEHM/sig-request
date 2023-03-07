@@ -1,6 +1,7 @@
 let registerForm = document.querySelector("#register-form")
 let inputs = document.querySelectorAll(".input-text")
 let page1Next = document.querySelector("#page-1-next");
+let page2Next = document.querySelector("#page-2-next");
 let page1 = document.querySelector(".page-1")
 let page2 = document.querySelector(".page-2")
 let appState = {
