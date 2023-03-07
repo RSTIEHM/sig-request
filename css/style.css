@@ -821,6 +821,19 @@ label {
   margin: 0 auto;
 }
 
+.page-2 {
+  display: none;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  width: 60%;
+  height: 100%;
+  transform: translateY(10%);
+  /* margin: 0 auto; */
+  /* border: 1px solid #fff; */
+  margin: 0 auto;
+}
+
 .employee-type {
   display: flex;
   justify-content: space-between;
