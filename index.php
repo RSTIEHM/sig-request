@@ -68,46 +68,46 @@
       <div class="page-2" data-page="2">
         <section class="form-group employee-type">
           <div class="form-check">
-            <input data-id="new" class="emp-radio" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+            <input data-id="new" class="emp-radio-" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
             <label class="form-check-label emp-label" for="flexRadioDefault1">
               New Employee 2
             </label>
           </div>
           <div class="form-check">
-            <input data-id="transfer" class="emp-radio" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+            <input data-id="transfer" class="emp-radio-" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
             <label class="form-check-label emp-label" for="flexRadioDefault2">
               Employee Transfer
             </label>
           </div>
           <div class="form-check">
-            <input data-id="separation" class="emp-radio" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+            <input data-id="separation" class="emp-radio-" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
             <label class="form-check-label emp-label" for="flexRadioDefault2">
               Employee Separation
             </label>
           </div>
         </section>
 
-        <section class="page-1-emp-inputs">
+        <section class="page-3-emp-inputs">
           <div class="form-group">
             <div class="label-wrap">
               <label class="input-label" for="user-name">Employee Name </label>
               <span class="input-label-msg">can't be empty</span>
             </div>
-            <input data-id="userName" value="" id="user-name" type="text" class="input-text page-1-empInfo" name="user-name" placeholder="">
+            <input data-id="userName" value="" id="user-name" type="text" class="input-text page-2-empInfo" name="user-name" placeholder="">
           </div>
           <div class="form-group">
             <div class="label-wrap">
               <label class="input-label" for="deptartment">Department </label>
               <span class="input-label-msg">can't be empty</span>
             </div>
-            <input data-id="department" value="" id="department" type="text" class="input-text page-1-empInfo" name="deptartment" placeholder="">
+            <input data-id="department" value="" id="department" type="text" class="input-text page-2-empInfo" name="deptartment" placeholder="">
           </div>
           <div class="form-group">
             <div class="label-wrap">
               <label class="input-label" for="action-date">Action Date </label>
               <span class="input-label-msg">can't be empty</span>
             </div>
-            <input data-id="actionDate" value="" id="action-date" type="date" class="input-text page-1-empInfo" name="action-date">
+            <input data-id="actionDate" value="" id="action-date" type="date" class="input-text page-2-empInfo" name="action-date">
           </div>
         </section>
         <div class="form-group">

@@ -815,7 +815,7 @@ label {
   flex-direction: column;
   width: 60%;
   height: 100%;
-  transform: translateY(10%);
+  transform: translateY(15%);
   /* margin: 0 auto; */
   /* border: 1px solid #fff; */
   margin: 0 auto;
@@ -828,7 +828,7 @@ label {
   flex-direction: column;
   width: 60%;
   height: 100%;
-  transform: translateY(10%);
+  transform: translateY(15%);
   /* margin: 0 auto; */
   /* border: 1px solid #fff; */
   margin: 0 auto;
