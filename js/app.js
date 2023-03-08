@@ -1,16 +1,17 @@
 let registerForm = document.querySelector("#register-form")
 let inputs = document.querySelectorAll(".input-text")
 let page1Next = document.querySelector("#page-1-next");
+let page2Next = document.querySelector("#page-2-next");
 // let page2Next = document.querySelector("#page-2-next");
 let page1 = document.querySelector(".page-1")
-// let page2 = document.querySelector(".page-2")
+let page2 = document.querySelector(".page-2")
 let appState = {
   currentPage: 1,
   employee: {}
 }
 
 // page2.style.display = "none"
-console.log(appState)
+
 page1Next.addEventListener("click", () => {
   // SHOW LOADING =========
 
@@ -40,11 +41,54 @@ page1Next.addEventListener("click", () => {
   //   }
   // }
   // LOOP OVER THE OBJ AND INSERT INTO GLOBAL EMPLOYEE
+  page1.style.display = "none"
+  page2.style.display = "block"
+  // console.log(empObj, "EMP OBJ")
+  // console.log(appState, "APP STATE")
+  appState.currentPage = appState.currentPage + 1
+
+})
+
+page2Next.addEventListener("click", () => {
+  // SHOW LOADING =========
+
+  let empObj = {}
+  let empComputer = document.querySelectorAll(".emp-computer")
+  let empComputerText = document.querySelectorAll(".comp-input-text")
+  console.log(empObj)
+  empComputer.forEach(item => {
+    if (item.type === 'checkbox' && item.checked) {
+      empObj[item.name] = "Yes"
+    }
+  })
+
+  empComputerText.forEach(item => {
+    empObj[item.dataset.id] = item.value
+  })
+
+  appState.currentPage = appState.currentPage + 1
+  appState.tech = empObj
+  console.log(appState, "APP")
+  page2.style.display = "none"
+  // page3 ON
+  // appState.employee = empObj
+  // Object.getOwnPropertyNames(empInfo).forEach((val, idx, array) => {
+  //   console.log(`${val} -> ${empObj[val]}`);
+  //   console.log(val, "VAL")
+  // });
+
+  // for (const val in empObj) {
+  //   if (Object.hasOwnProperty.call(empObj, val)) {
+  //     let objKey = Object.keys(empObj)
+  //     appState.employee[objKey] = empObj[val]
+  //   }
+  // }
+  // LOOP OVER THE OBJ AND INSERT INTO GLOBAL EMPLOYEE
   // page1.style.display = "none"
   // page2.style.display = "flex"
-  console.log(empObj, "EMP OBJ")
-  console.log(appState, "APP STATE")
-  appState.currentPage = appState.currentPage + 1
+  // console.log(empObj, "EMP OBJ")
+  // console.log(appState, "APP STATE")
+  // appState.currentPage = appState.currentPage + 1
 
 })
 

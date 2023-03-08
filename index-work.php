@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<?php include("includes/header.php") ?>
+<?php include("includes/header2.php") ?>
 <?php
 
 

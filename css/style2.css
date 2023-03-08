@@ -356,6 +356,37 @@ select {
   justify-content: space-between;
   align-items: center;
 }
+.flex-even {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.flex-auto {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 100%;
+}
+
+.flex-around {
+    display: flex;
+      justify-content: space-around;
+      align-items: center;
+}
+
+.flex-check {
+  display: flex;
+  justify-content: flex-start;
+  gap: 5px;
+  /* width: 120px; */
+}
+
+.flex-stretch {
+    display: flex;
+      justify-content: space-between;
+      align-items: stretch;
+}
 
 .block {
   display: block;
@@ -460,6 +491,10 @@ h1.heading-1 {
   padding: 2rem 0;
 }
 
+.heading-white {
+  color: #fff;
+}
+
 .page-wrapper {
   width: 100%;
   /* height: 100vh; */
@@ -467,7 +502,8 @@ h1.heading-1 {
 }
 
 .page {
-  width: 70%;
+  width: 80%;
+  /* max-width: 800px; */
   background-color: #0c0e16;
   margin: 0 auto;
   border-radius: 10px;
@@ -476,10 +512,24 @@ h1.heading-1 {
 /* PAGE 1 */
 .page-1 {
   padding: 4rem 4rem 2rem 4rem;
+  display: block;
+}
 
+.page-2 {
+  padding: 4rem 4rem 2rem 4rem;
+  display: none;
+}
+
+.drive-printer {
+  margin: 70px 0 60px 0;
 }
 
 input.emp-radio {
+  width: 20px;
+  height: 20px;
+  transform: translateY(1px);
+}
+input.emp-computer {
   width: 20px;
   height: 20px;
   transform: translateY(1px);
