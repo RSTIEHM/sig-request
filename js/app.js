@@ -2,18 +2,18 @@ let registerForm = document.querySelector("#register-form")
 let inputs = document.querySelectorAll(".input-text")
 let page1Next = document.querySelector("#page-1-next");
 let page2Next = document.querySelector("#page-2-next");
-// let page2Next = document.querySelector("#page-2-next");
 let page1 = document.querySelector(".page-1")
 let page2 = document.querySelector(".page-2")
+let loading = document.querySelector(".loading")
 let appState = {
   currentPage: 1,
   employee: {}
 }
 
-// page2.style.display = "none"
 
 page1Next.addEventListener("click", () => {
   // SHOW LOADING =========
+  loading.style.display = "flex"
 
   let empObj = {}
   let empRadio = document.querySelectorAll(".emp-radio")
@@ -42,9 +42,11 @@ page1Next.addEventListener("click", () => {
   // }
   // LOOP OVER THE OBJ AND INSERT INTO GLOBAL EMPLOYEE
   page1.style.display = "none"
+ 
+  setTimeout(() => {
+    loading.style.display = "none"
+  }, 500);
   page2.style.display = "block"
-  // console.log(empObj, "EMP OBJ")
-  // console.log(appState, "APP STATE")
   appState.currentPage = appState.currentPage + 1
 
 })

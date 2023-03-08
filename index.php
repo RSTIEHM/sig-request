@@ -8,6 +8,9 @@
 ?>
 
 <body>
+  <div class="loading">
+    <img class="loading-img" src="./images/loading.gif" alt="">
+  </div>
   <div class="site-wrapper">
     <header class="header"></header>
     <h1 class="heading-1">Employee Service Request</h1>
