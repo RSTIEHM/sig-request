@@ -53,7 +53,7 @@ page1Next.addEventListener("click", () => {
 
 page2Next.addEventListener("click", () => {
   // SHOW LOADING =========
-
+  loading.style.display = "flex"
   let empObj = {}
   let empComputer = document.querySelectorAll(".emp-computer")
   let empComputerText = document.querySelectorAll(".comp-input-text")
@@ -71,6 +71,9 @@ page2Next.addEventListener("click", () => {
   appState.currentPage = appState.currentPage + 1
   appState.tech = empObj
   console.log(appState, "APP")
+  setTimeout(() => {
+    loading.style.display = "none"
+  }, 500);
   page2.style.display = "none"
   // page3 ON
   // appState.employee = empObj
