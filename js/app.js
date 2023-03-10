@@ -6,10 +6,45 @@ let page3Next = document.querySelector("#page-3-next");
 let page1 = document.querySelector(".page-1")
 let page2 = document.querySelector(".page-2")
 let page3 = document.querySelector(".page-3")
+let page4 = document.querySelector(".page-4")
 let loading = document.querySelector(".loading")
 let appState = {
   currentPage: 1,
   employee: {}
+}
+
+const loadSummaryPage = (obj) => {
+  // GATHER INFO CATEGORY 
+  let employeeInfo = obj.employee
+  let techTel = obj.tech
+  let softwareEmail = obj.software
+  console.log(employeeInfo, techTel, softwareEmail)
+  loadEmployeeSummary(employeeInfo)
+  loadTechSoftwareSummary(techTel, ".tech-summary-col")
+  loadTechSoftwareSummary(softwareEmail, ".software-summary-col")
+}
+
+const loadEmployeeSummary = (empObj) => {
+  let summary = document.querySelector(".employee-summary-col")
+  let html = `
+   <h3 class="heading-white-lg text-center">Employee Info</h3>
+   <p class="line-item">${empObj.employeeName} </p>
+   <p class="line-item">Department - ${empObj.department}</p>
+   <p class="line-item">Action Date - ${empObj.actionDate}</p>
+  `
+  summary.innerHTML = html
+}
+
+const loadTechSoftwareSummary = (obj, cls) => {
+  let summary = document.querySelector(cls)
+  let html = `
+   <h3 class="heading-white-lg text-center">Tech - Telecom</h3>
+  `
+  for (const key in obj) {
+    let p = `<p class="line-item">${key} - ${obj[key]}</p>`
+    html += p
+  }
+  summary.innerHTML = html
 }
 
 
@@ -46,8 +81,10 @@ page2Next.addEventListener("click", () => {
   // SHOW LOADING =========
   loading.style.display = "flex"
   let empObj = {}
+  //===
   let empComputer = document.querySelectorAll(".emp-computer")
   let empComputerText = document.querySelectorAll(".comp-input-text")
+  //=====
 
   empComputer.forEach(item => {
     if (item.type === 'checkbox' && item.checked) {
@@ -59,9 +96,10 @@ page2Next.addEventListener("click", () => {
     empObj[item.dataset.id] = item.value
   })
 
+  //==========
   appState.currentPage = appState.currentPage + 1
   appState.tech = empObj
-
+  //==========
   setTimeout(() => {
     loading.style.display = "none"
   }, 500);
@@ -74,31 +112,36 @@ page3Next.addEventListener("click", () => {
   loading.style.display = "flex"
   let empObj = {}
   let empEmail = document.querySelectorAll(".emp-email")
+  let additionalEmails = document.querySelector(".page-3-email-input")
   let empSoftware = document.querySelectorAll(".emp-software")
-  console.log(empObj)
+
+  if(additionalEmails.value != "") {
+    empObj[additionalEmails.name] = additionalEmails.value
+  }
   empEmail.forEach(item => {
     if (item.type === 'checkbox' && item.checked) {
       empObj[item.name] = "Yes"
     }
   })
+
+
   empSoftware.forEach(item => {
     if (item.type === 'checkbox' && item.checked) {
       empObj[item.name] = "Yes"
     }
   })
 
-  // empComputerText.forEach(item => {
-  //   empObj[item.dataset.id] = item.value
-  // })
 
   appState.currentPage = appState.currentPage + 1
   appState.software = empObj
   setTimeout(() => {
     loading.style.display = "none"
   }, 500);
+
+  // 
+  loadSummaryPage(appState)
   page3.style.display = "none"
-  // page3.style.display = "block"
-  console.log(appState, "APP 3!!!")
+  page4.style.display = "block"
 })
 
 // const addInputErrorClass = (elem, className) => {

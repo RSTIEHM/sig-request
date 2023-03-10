@@ -43,9 +43,9 @@
         <section class="page-1-emp-inputs">
           <div class="form-group">
             <div class="label-wrap">
-              <label class="input-label" for="user-name">Employee Name </label>
+              <label class="input-label" for="employeeName">Employee Name </label>
             </div>
-            <input data-id="userName" value="" id="user-name" type="text" class="input-text page-1-empInfo" name="user-name" placeholder="">
+            <input data-id="employeeName" value="" id="employeeName" type="text" class="input-text page-1-empInfo" name="employeeName" placeholder="">
           </div>
           <div class="form-group">
             <div class="label-wrap">
@@ -169,7 +169,7 @@
                 <input data-id="AdditionalEmails" name="AdditionalEmails" type="checkbox" class="emp-email computer-check comp-input">
                 <h3 class="heading-white">Additonal Mailboxes</h3>
               </div>
-              <input data-id="userName" value="" id="user-name" type="text" class="input-text page-3-email-input" name="user-name" placeholder="Separate With A Comma">
+              <input data-id="AdditionalEmail" value="" id="user-name" type="text" class="input-text page-3-email-input" name="AdditionalEmail" placeholder="Separate With A Comma">
             </div>
         </div>
 
@@ -279,11 +279,28 @@
               </div>
           </div>
         </div>
+        <br>
         <div class="form-group">
           <p id="page-3-next" class="btn btn-4-purple btn-full">NEXT</p>
         </div>
         </section>
       </div>
+      <!-- END PAGE 3 -->
+
+      <div class="page page-4" data-page="4">
+        <div class="flex-start">
+          <div class="employee-summary-col">
+
+          </div>
+          <div class="tech-summary-col">
+
+          </div>
+          <div class="software-summary-col">
+
+          </div>
+        </div>
+      </div>
+
     </div>
     <!-- ========END page-wrapper=========== -->
   </div>
