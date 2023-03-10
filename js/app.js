@@ -2,6 +2,7 @@ let registerForm = document.querySelector("#register-form")
 let inputs = document.querySelectorAll(".input-text")
 let page1Next = document.querySelector("#page-1-next");
 let page2Next = document.querySelector("#page-2-next");
+let page3Next = document.querySelector("#page-3-next");
 let page1 = document.querySelector(".page-1")
 let page2 = document.querySelector(".page-2")
 let page3 = document.querySelector(".page-3")
@@ -30,18 +31,7 @@ page1Next.addEventListener("click", () => {
       empObj[item.dataset.id] = item.value
   })
   appState.employee = empObj
-  // Object.getOwnPropertyNames(empInfo).forEach((val, idx, array) => {
-  //   console.log(`${val} -> ${empObj[val]}`);
-  //   console.log(val, "VAL")
-  // });
-
-  // for (const val in empObj) {
-  //   if (Object.hasOwnProperty.call(empObj, val)) {
-  //     let objKey = Object.keys(empObj)
-  //     appState.employee[objKey] = empObj[val]
-  //   }
-  // }
-  // LOOP OVER THE OBJ AND INSERT INTO GLOBAL EMPLOYEE
+ 
   page1.style.display = "none"
  
   setTimeout(() => {
@@ -58,7 +48,7 @@ page2Next.addEventListener("click", () => {
   let empObj = {}
   let empComputer = document.querySelectorAll(".emp-computer")
   let empComputerText = document.querySelectorAll(".comp-input-text")
-  console.log(empObj)
+
   empComputer.forEach(item => {
     if (item.type === 'checkbox' && item.checked) {
       empObj[item.name] = "Yes"
@@ -71,32 +61,44 @@ page2Next.addEventListener("click", () => {
 
   appState.currentPage = appState.currentPage + 1
   appState.tech = empObj
-  console.log(appState, "APP")
+
   setTimeout(() => {
     loading.style.display = "none"
   }, 500);
   page2.style.display = "none"
   page3.style.display = "block"
-  // page3 ON
-  // appState.employee = empObj
-  // Object.getOwnPropertyNames(empInfo).forEach((val, idx, array) => {
-  //   console.log(`${val} -> ${empObj[val]}`);
-  //   console.log(val, "VAL")
-  // });
+})
 
-  // for (const val in empObj) {
-  //   if (Object.hasOwnProperty.call(empObj, val)) {
-  //     let objKey = Object.keys(empObj)
-  //     appState.employee[objKey] = empObj[val]
-  //   }
-  // }
-  // LOOP OVER THE OBJ AND INSERT INTO GLOBAL EMPLOYEE
-  // page1.style.display = "none"
-  // page2.style.display = "flex"
-  // console.log(empObj, "EMP OBJ")
-  // console.log(appState, "APP STATE")
-  // appState.currentPage = appState.currentPage + 1
+page3Next.addEventListener("click", () => {
+  // SHOW LOADING =========
+  loading.style.display = "flex"
+  let empObj = {}
+  let empEmail = document.querySelectorAll(".emp-email")
+  let empSoftware = document.querySelectorAll(".emp-software")
+  console.log(empObj)
+  empEmail.forEach(item => {
+    if (item.type === 'checkbox' && item.checked) {
+      empObj[item.name] = "Yes"
+    }
+  })
+  empSoftware.forEach(item => {
+    if (item.type === 'checkbox' && item.checked) {
+      empObj[item.name] = "Yes"
+    }
+  })
 
+  // empComputerText.forEach(item => {
+  //   empObj[item.dataset.id] = item.value
+  // })
+
+  appState.currentPage = appState.currentPage + 1
+  appState.software = empObj
+  setTimeout(() => {
+    loading.style.display = "none"
+  }, 500);
+  page3.style.display = "none"
+  // page3.style.display = "block"
+  console.log(appState, "APP 3!!!")
 })
 
 // const addInputErrorClass = (elem, className) => {
@@ -129,3 +131,16 @@ const checkForEmpty = (inputElem) => {
 //     console.log(element)
 //   });
 // })
+
+ // Object.getOwnPropertyNames(empInfo).forEach((val, idx, array) => {
+  //   console.log(`${val} -> ${empObj[val]}`);
+  //   console.log(val, "VAL")
+  // });
+
+  // for (const val in empObj) {
+  //   if (Object.hasOwnProperty.call(empObj, val)) {
+  //     let objKey = Object.keys(empObj)
+  //     appState.employee[objKey] = empObj[val]
+  //   }
+  // }
+  // LOOP OVER THE OBJ AND INSERT INTO GLOBAL EMPLOYEE

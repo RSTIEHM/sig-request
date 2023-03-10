@@ -598,6 +598,11 @@ input.emp-email {
   height: 20px;
   transform: translateY(5px);
 }
+input.emp-software {
+  width: 20px;
+  height: 20px;
+  transform: translateY(5px);
+}
 
 #page-1-next {
   margin-bottom: 0px;

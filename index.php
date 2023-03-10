@@ -169,7 +169,7 @@
                 <input data-id="AdditionalEmails" name="AdditionalEmails" type="checkbox" class="emp-email computer-check comp-input">
                 <h3 class="heading-white">Additonal Mailboxes</h3>
               </div>
-              <input data-id="userName" value="" id="user-name" type="text" class="input-text page-1-empInfo" name="user-name" placeholder="Separate With A Comma">
+              <input data-id="userName" value="" id="user-name" type="text" class="input-text page-3-email-input" name="user-name" placeholder="Separate With A Comma">
             </div>
         </div>
 
@@ -278,6 +278,9 @@
                 <h3 class="heading-white">Zoom</h3>
               </div>
           </div>
+        </div>
+        <div class="form-group">
+          <p id="page-3-next" class="btn btn-4-purple btn-full">NEXT</p>
         </div>
         </section>
       </div>
