@@ -4,6 +4,7 @@ let page1Next = document.querySelector("#page-1-next");
 let page2Next = document.querySelector("#page-2-next");
 let page1 = document.querySelector(".page-1")
 let page2 = document.querySelector(".page-2")
+let page3 = document.querySelector(".page-3")
 let loading = document.querySelector(".loading")
 let appState = {
   currentPage: 1,
@@ -75,6 +76,7 @@ page2Next.addEventListener("click", () => {
     loading.style.display = "none"
   }, 500);
   page2.style.display = "none"
+  page3.style.display = "block"
   // page3 ON
   // appState.employee = empObj
   // Object.getOwnPropertyNames(empInfo).forEach((val, idx, array) => {
