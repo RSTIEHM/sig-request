@@ -288,15 +288,22 @@
       <!-- END PAGE 3 -->
 
       <div class="page page-4" data-page="4">
-        <div class="flex-start">
-          <div class="employee-summary-col">
+        <div class="flex-start-start">
+          <div>
+            <div class="employee-summary-col">
 
-          </div>
-          <div class="tech-summary-col">
+            </div>
+            <br>
+            <div class="tech-summary-col">
 
+            </div>
           </div>
+
           <div class="software-summary-col">
 
+          </div>
+          <div>
+            <button>Send Mail</button>
           </div>
         </div>
       </div>

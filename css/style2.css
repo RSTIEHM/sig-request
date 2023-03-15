@@ -396,6 +396,13 @@ select {
   justify-content: space-between;
   align-items: flex-start;
 }
+
+.flex-start-start {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap:30px;
+}
 .flex-even {
   display: flex;
   justify-content: space-evenly;
@@ -640,4 +647,18 @@ input.emp-software {
   color: #fff;
   padding-top: 2rem;
   height: 100vh;
+}
+
+.software-summary-col {
+  width: 50%;
+}
+
+.software-wrap {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.span-hide {
+  opacity: 0;
 }

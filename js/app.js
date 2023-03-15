@@ -20,8 +20,8 @@ const loadSummaryPage = (obj) => {
   let softwareEmail = obj.software
   console.log(employeeInfo, techTel, softwareEmail)
   loadEmployeeSummary(employeeInfo)
-  loadTechSoftwareSummary(techTel, ".tech-summary-col")
-  loadTechSoftwareSummary(softwareEmail, ".software-summary-col")
+  loadTechSoftwareSummary(techTel, ".tech-summary-col", "tech")
+  loadTechSoftwareSummary(softwareEmail, ".software-summary-col", "software")
 }
 
 const loadEmployeeSummary = (empObj) => {
@@ -35,15 +35,31 @@ const loadEmployeeSummary = (empObj) => {
   summary.innerHTML = html
 }
 
-const loadTechSoftwareSummary = (obj, cls) => {
+const loadTechSoftwareSummary = (obj, cls, type) => {
   let summary = document.querySelector(cls)
-  let html = `
-   <h3 class="heading-white-lg text-center">Tech - Telecom</h3>
+  let html
+  let p
+  if(type === "software") {
+    html = `
+   <h3 class="heading-white-lg text-center">Software</h3>
+   <div class="software-wrap">
   `
-  for (const key in obj) {
-    let p = `<p class="line-item">${key} - ${obj[key]}</p>`
-    html += p
+    for (const key in obj) {
+      let p = `<p class="line-item">${key} - ${obj[key]}<span class="span-hide">C</span></p>`
+      html += p
+    }
+    html+= `<div>`
+  } else {
+    html = `
+   <h3 class="heading-white-lg text-center">Tech</h3>
+  ` 
+    for (const key in obj) {
+      let p = `<p class="line-item">${key} - ${obj[key]}</p>`
+      html += p
+    }
   }
+
+
   summary.innerHTML = html
 }
 
